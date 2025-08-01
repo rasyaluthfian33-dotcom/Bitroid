@@ -1,0 +1,22 @@
+data = []
+
+while True:
+    a = input("Masukkan data: ")
+    try:
+        a = float(a)  # Ubah ke float agar bisa dijumlahkan
+        data.append(a)
+    except ValueError:
+        print("Masukkan angka yang valid!")
+        continue
+
+    print("Data saat ini:", data)
+
+    m = input("Ada data lagi? (Y/t): ")
+    if m.lower() == 't':
+        break
+
+j = sum(data)
+p = len(data)
+rata2 = j / p if p > 0 else 0
+
+print("Rata-rata data =", rata2)
